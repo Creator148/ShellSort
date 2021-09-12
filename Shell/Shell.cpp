@@ -12,6 +12,7 @@ int main()
 
 D1:	t = t - 1;
 	s = t;
+	h = H[s];
 	int j = 17;
 	for (int p = 1; p < 17; p++) {
 		cout << (k[p]) << ' ' ;
@@ -24,8 +25,7 @@ D1:	t = t - 1;
 	}
 	goto D2;
 
-D2:	h = H[s];
-	j = j - 1;
+D2:	j = j - 1;
 	if (j > h) {
 		goto D3;
 	}
@@ -41,8 +41,9 @@ D3:	i = j - h;
 D4:	if (K >= k[i]){
 	goto D6;
 }
+else {
 	goto D5;
-
+}
 D5:	k[i+h] = k[i];
 	i = i - h;
 	if (i > 0) {
